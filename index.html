@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Alda & Rheza</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --hijau-tua: #1B4D3E;
+            --hijau-medium: #2E8B57;
+            --krem: #F5F5DC;
+            --krem-gelap: #E6D6B3;
+            --putih: #FFFFFF;
+            --coklat: #8B4513;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: var(--krem);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(rgba(27, 77, 62, 0.85), rgba(27, 77, 62, 0.9)), url('https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--putih);
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .couple-names {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+        }
+        
+        .wedding-date {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 30px;
+            letter-spacing: 3px;
+        }
+        
+        .divider {
+            width: 150px;
+            height: 2px;
+            background-color: var(--putih);
+            margin: 20px auto;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--hijau-tua);
+            letter-spacing: 1px;
+        }
+        
+        /* Couple Section */
+        .couple-section {
+            background-color: var(--putih);
+        }
+        
+        .couple-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .couple-card {
+            background-color: var(--krem);
+            border-radius: 10px;
+            padding: 30px;
+            width: 45%;
+            min-width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid var(--krem-gelap);
+        }
+        
+        .couple-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .couple-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--hijau-tua);
+            margin-bottom: 20px;
+        }
+        
+        .couple-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--hijau-tua);
+        }
+        
+        .couple-parents {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--coklat);
+            margin-bottom: 20px;
+        }
+        
+        /* Event Section */
+        .event-section {
+            background-color: var(--krem);
+        }
+        
+        .event-details {
+            background-color: var(--putih);
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border: 1px solid var(--krem-gelap);
+        }
+        
+        .event-date {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--hijau-tua);
+            margin-bottom: 10px;
+        }
+        
+        .event-location {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        .btn-location {
+            display: inline-block;
+            background-color: var(--hijau-tua);
+            color: var(--putih);
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        
+        .btn-location:hover {
+            background-color: var(--hijau-medium);
+            transform: scale(1.05);
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            background-color: var(--putih);
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 300px;
+            position: relative;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Map Section */
+        .map-section {
+            background-color: var(--krem);
+            padding: 60px 0;
+        }
+        
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid var(--krem-gelap);
+        }
+        
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+        
+        /* Bank Account Section */
+        .bank-section {
+            background-color: var(--putih);
+        }
+        
+        .bank-details {
+            background-color: var(--krem);
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border: 1px solid var(--krem-gelap);
+        }
+        
+        .bank-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--hijau-tua);
+            margin-bottom: 10px;
+        }
+        
+        .account-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 20px 0;
+            color: var(--coklat);
+            letter-spacing: 2px;
+        }
+        
+        .account-holder {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--hijau-tua);
+            color: var(--putih);
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .thank-you {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .couple-names {
+                font-size: 3rem;
+            }
+            
+            .couple-card {
+                width: 100%;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        
+        /* Countdown Timer */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-item {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            min-width: 80px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .countdown-number {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+        }
+        
+        .countdown-label {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        /* Floral decorative elements */
+        .floral-divider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+        }
+        
+        .floral-divider::before,
+        .floral-divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: var(--hijau-tua);
+            margin: 0 15px;
+        }
+        
+        .floral-icon {
+            font-size: 24px;
+            color: var(--hijau-tua);
+        }
+        
+        /* Javanese Pattern */
+        .javanese-pattern {
+            position: absolute;
+            width: 100%;
+            height: 60px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 100 20"><path d="M10,10 Q20,0 30,10 T50,10 T70,10 T90,10" fill="none" stroke="%231B4D3E" stroke-width="2" opacity="0.3"/></svg>');
+            background-repeat: repeat-x;
+            bottom: 0;
+            left: 0;
+        }
+        
+        /* Music Player */
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--hijau-tua);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .music-player i {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Music Player -->
+    <div class="music-player" id="musicToggle">
+        <i>♪</i>
+    </div>
+    <audio id="weddingMusic" loop>
+        <source src="https://www.soundjay.com/misc/sounds/wedding-bell-ringing-01.mp3" type="audio/mpeg">
+    </audio>
+
+    <header>
+        <div class="container">
+            <h1 class="couple-names fade-in">Alda & Rheza</h1>
+            <div class="divider fade-in delay-1"></div>
+            <p class="wedding-date fade-in delay-2">15 Juni 2026</p>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown fade-in delay-3">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Hari</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Jam</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Menit</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Detik</span>
+                </div>
+            </div>
+            
+            <p class="fade-in delay-3">"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang." (QS. Ar-Rum: 21)</p>
+        </div>
+        <div class="javanese-pattern"></div>
+    </header>
+
+    <section class="couple-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Mempelai</h2>
+            <div class="floral-divider">
+                <span class="floral-icon">❀</span>
+            </div>
+            <div class="couple-container">
+                <div class="couple-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" alt="Alda Rahma Putri" class="couple-image">
+                    <h3 class="couple-name">Alda Rahma Putri</h3>
+                    <p class="couple-parents">Putri dari Bapak Darmo Sumarsih & Ibu Endang</p>
+                </div>
+                <div class="couple-card fade-in delay-1">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Rheza Fahry Abuhanifah" class="couple-image">
+                    <h3 class="couple-name">Rheza Fahry Abuhanifah</h3>
+                    <p class="couple-parents">Putra dari Bapak Waras & Ibu Widya Yektining Darmastuti</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Galeri Prewedding</h2>
+            <div class="floral-divider">
+                <span class="floral-icon">❀</span>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Prewedding 1">
+                </div>
+                <div class="gallery-item fade-in delay-1">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Prewedding 2">
+                </div>
+                <div class="gallery-item fade-in delay-2">
+                    <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Prewedding 3">
+                </div>
+                <div class="gallery-item fade-in delay-3">
+                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Prewedding 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="event-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Acara Pernikahan</h2>
+            <div class="floral-divider">
+                <span class="floral-icon">❀</span>
+            </div>
+            <div class="event-details fade-in delay-1">
+                <p class="event-date">15 Juni 2026</p>
+                <p class="event-location">Gedung Wanita Surabaya</p>
+                <p><strong>Akad Nikah:</strong> 08.00 - 10.00 WIB</p>
+                <p><strong>Resepsi:</strong> 11.00 - 14.00 WIB</p>
+                <a href="https://www.google.com/maps/place/Gedung+Wanita+Candra+Kencana/@-7.2877085,112.7605337,453m/data=!3m1!1e3!4m15!1m8!3m7!1s0x2dd7fbb53b29cbb7:0xee33be91a97dbb70!2sGedung+Wanita+Candra+Kencana!8m2!3d-7.2878229!4d112.7618051!10e1!16s%2Fg%2F1hc2m662m!3m5!1s0x2dd7fbb53b29cbb7:0xee33be91a97dbb70!8m2!3d-7.2878229!4d112.7618051!16s%2Fg%2F1hc2m662m?entry=ttu&g_ep=EgoyMDI1MDkyMy4wIKXMDSoASAFQAw%3D%3D" class="btn-location" target="_blank">Lihat Lokasi</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Lokasi Acara</h2>
+            <div class="floral-divider">
+                <span class="floral-icon">❀</span>
+            </div>
+            <div class="map-container fade-in delay-1">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.715335106882!2d112.75923027415467!3d-7.287822892726853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbb53b29cbb7%3A0xee33be91a97dbb70!2sGedung%20Wanita%20Candra%20Kencana!5e0!3m2!1sen!2sid!4v1690000000000!5m2!1sen!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="bank-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Hadiah Pernikahan</h2>
+            <div class="floral-divider">
+                <span class="floral-icon">❀</span>
+            </div>
+            <div class="bank-details fade-in delay-1">
+                <p class="bank-name">Bank Central Asia (BCA)</p>
+                <p class="account-number">4280 9347 9178 01</p>
+                <p class="account-holder">a.n Rheza Fahry Abuhanifah</p>
+                <p>Terima kasih atas doa dan restunya</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3 class="thank-you">Terima Kasih</h3>
+            <p>Atas kehadiran dan doa restunya, kami mengucapkan terima kasih</p>
+            <p>Alda & Rheza</p>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const weddingDate = new Date('June 15, 2026 08:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.querySelector('.countdown').innerHTML = "<p>Acara pernikahan telah berlangsung!</p>";
+            }
+        }
+        
+        const countdownTimer = setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Animasi saat scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInOnScroll = function() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.style.opacity = 1;
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Jalankan sekali saat halaman dimuat
+            fadeInOnScroll();
+            
+            // Jalankan saat scroll
+            window.addEventListener('scroll', fadeInOnScroll);
+            
+            // Inisialisasi semua elemen dengan opacity 0
+            fadeElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(20px)';
+            });
+        });
+        
+        // Music Player
+        const musicToggle = document.getElementById('musicToggle');
+        const weddingMusic = document.getElementById('weddingMusic');
+        let isPlaying = false;
+        
+        musicToggle.addEventListener('click', function() {
+            if (isPlaying) {
+                weddingMusic.pause();
+                musicToggle.innerHTML = '<i>♪</i>';
+            } else {
+                weddingMusic.play();
+                musicToggle.innerHTML = '<i>❚❚</i>';
+            }
+            isPlaying = !isPlaying;
+        });
+    </script>
+</body>
+</html>
